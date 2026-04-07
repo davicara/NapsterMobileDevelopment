@@ -1,7 +1,55 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|c:\\users\\carrad\\source\\repos\\napstermobiledevelopment\\napstermobiledevelopment\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|solutionrelative:napstermobiledevelopment\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|c:\\users\\carrad\\source\\repos\\napstermobiledevelopment\\napstermobiledevelopment\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|solutionrelative:napstermobiledevelopment\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|c:\\users\\carrad\\source\\repos\\napstermobiledevelopment\\napstermobiledevelopment\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|solutionrelative:napstermobiledevelopment\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|c:\\users\\carrad\\source\\repos\\napstermobiledevelopment\\napstermobiledevelopment\\views\\artistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|solutionrelative:napstermobiledevelopment\\views\\artistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CARRAD\\AppData\\Local\\Temp\\.vsdbgsrc\\1c5fea415271f9ec1d1b8edebafe3d466feaf4d4\\ViewsMainPage.xaml.sg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|c:\\users\\carrad\\source\\repos\\napstermobiledevelopment\\napstermobiledevelopment\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|solutionrelative:napstermobiledevelopment\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|c:\\users\\carrad\\source\\repos\\napstermobiledevelopment\\napstermobiledevelopment\\models\\artist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|solutionrelative:napstermobiledevelopment\\models\\artist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|c:\\users\\carrad\\source\\repos\\napstermobiledevelopment\\napstermobiledevelopment\\models\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|solutionrelative:napstermobiledevelopment\\models\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|c:\\users\\carrad\\source\\repos\\napstermobiledevelopment\\napstermobiledevelopment\\views\\artistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|solutionrelative:napstermobiledevelopment\\views\\artistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|c:\\users\\carrad\\source\\repos\\napstermobiledevelopment\\napstermobiledevelopment\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|solutionrelative:napstermobiledevelopment\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|c:\\users\\carrad\\source\\repos\\napstermobiledevelopment\\napstermobiledevelopment\\napstermobiledevelopment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|solutionrelative:napstermobiledevelopment\\napstermobiledevelopment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|c:\\users\\carrad\\source\\repos\\napstermobiledevelopment\\napstermobiledevelopment\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C904686-8B9D-282A-FFF4-AF921D6E12DA}|NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj|solutionrelative:napstermobiledevelopment\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +57,176 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 11,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\App.xaml.cs",
+              "RelativeDocumentMoniker": "NapsterMobileDevelopment\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\App.xaml.cs",
+              "RelativeToolTip": "NapsterMobileDevelopment\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T06:16:02.803Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ViewsMainPage.xaml.sg.cs",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\AppData\\Local\\Temp\\.vsdbgsrc\\1c5fea415271f9ec1d1b8edebafe3d466feaf4d4\\ViewsMainPage.xaml.sg.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\1c5fea415271f9ec1d1b8edebafe3d466feaf4d4\\ViewsMainPage.xaml.sg.cs",
+              "ToolTip": "C:\\Users\\CARRAD\\AppData\\Local\\Temp\\.vsdbgsrc\\1c5fea415271f9ec1d1b8edebafe3d466feaf4d4\\ViewsMainPage.xaml.sg.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\1c5fea415271f9ec1d1b8edebafe3d466feaf4d4\\ViewsMainPage.xaml.sg.cs [Read Only]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:16:27.846Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ArtistPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Views\\ArtistPage.xaml.cs",
+              "RelativeDocumentMoniker": "NapsterMobileDevelopment\\Views\\ArtistPage.xaml.cs",
+              "ToolTip": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Views\\ArtistPage.xaml.cs",
+              "RelativeToolTip": "NapsterMobileDevelopment\\Views\\ArtistPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:02:46.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\App.xaml",
+              "RelativeDocumentMoniker": "NapsterMobileDevelopment\\App.xaml",
+              "ToolTip": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\App.xaml",
+              "RelativeToolTip": "NapsterMobileDevelopment\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-07T06:53:58.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ArtistPage.xaml",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Views\\ArtistPage.xaml",
+              "RelativeDocumentMoniker": "NapsterMobileDevelopment\\Views\\ArtistPage.xaml",
+              "ToolTip": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Views\\ArtistPage.xaml",
+              "RelativeToolTip": "NapsterMobileDevelopment\\Views\\ArtistPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-07T06:51:49.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Playlist.cs",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Models\\Playlist.cs",
+              "RelativeDocumentMoniker": "NapsterMobileDevelopment\\Models\\Playlist.cs",
+              "ToolTip": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Models\\Playlist.cs",
+              "RelativeToolTip": "NapsterMobileDevelopment\\Models\\Playlist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T07:30:26.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Artist.cs",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Models\\Artist.cs",
+              "RelativeDocumentMoniker": "NapsterMobileDevelopment\\Models\\Artist.cs",
+              "ToolTip": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Models\\Artist.cs",
+              "RelativeToolTip": "NapsterMobileDevelopment\\Models\\Artist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T06:54:54.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "NapsterMobileDevelopment\\Services\\ApiService.cs",
+              "ToolTip": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Services\\ApiService.cs",
+              "RelativeToolTip": "NapsterMobileDevelopment\\Services\\ApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T06:19:18.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Views\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "NapsterMobileDevelopment\\Views\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Views\\MainPage.xaml.cs",
+              "RelativeToolTip": "NapsterMobileDevelopment\\Views\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T06:16:12.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Views\\MainPage.xaml",
+              "RelativeDocumentMoniker": "NapsterMobileDevelopment\\Views\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\Views\\MainPage.xaml",
+              "RelativeToolTip": "NapsterMobileDevelopment\\Views\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-31T06:16:07.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NapsterMobileDevelopment.csproj",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj",
+              "RelativeDocumentMoniker": "NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj",
+              "ToolTip": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj",
+              "RelativeToolTip": "NapsterMobileDevelopment\\NapsterMobileDevelopment.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-31T06:14:02.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "NapsterMobileDevelopment\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\CARRAD\\source\\repos\\NapsterMobileDevelopment\\NapsterMobileDevelopment\\MauiProgram.cs",
+              "RelativeToolTip": "NapsterMobileDevelopment\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T06:12:32.431Z",
+              "EditorCaption": ""
             }
           ]
         }

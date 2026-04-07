@@ -1,24 +1,30 @@
-﻿namespace NapsterMobileDevelopment
+﻿
+
+using NapsterMobileDevelopment.Models;
+using NapsterMobileDevelopment.Services;
+using System.Threading.Tasks;
+
+namespace NapsterMobileDevelopment
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
 
+        List<Task<Artist>> topArtists = [];
+        ApiService apiService = new ApiService();
+
+
         public MainPage()
         {
+            topArtists.Add(apiService.GetArtist("the-weeknd"));
+            Console.WriteLine(topArtists);
+
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        public async void OnArtistClicked(object? sender, EventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            await Navigation.PushAsync(new Views.ArtistPage());
         }
     }
 }

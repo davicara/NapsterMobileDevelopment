@@ -23,15 +23,7 @@ namespace NapsterMobileDevelopment.Models
         string URLSlug { get; set; }
 
 
-        public async Task<List<Playlist>> GetPlaylists(ApiService api)
-        {
 
-            string jsonData = await api.GetJson($"/artist/({URLSlug}/playlists");
-
-            List<Playlist> playlists = JsonConvert.DeserializeObject<List<Playlist>>(jsonData);
-
-            return playlists;
-        }
     }
     
 }

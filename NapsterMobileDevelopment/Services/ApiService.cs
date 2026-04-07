@@ -14,7 +14,7 @@ namespace NapsterMobileDevelopment.Services
 
         public async Task<string> GetJson(string url)
         {
-            string requestUrl = $"{baseURL}{url}";
+            string requestUrl = $"{baseURL}/{url}";
             HttpRequestMessage request = new(HttpMethod.Get, requestUrl);
             //request.Headers.Add("apiKey", "asuasfaadasd");
             HttpResponseMessage response = await _client.SendAsync(request);
@@ -31,11 +31,22 @@ namespace NapsterMobileDevelopment.Services
         }
         public async Task<Artist> GetArtist(string artistURL)
         {
-            string jsonData = await GetJson(artistURL);
+
+            string jsonData = await GetJson($"artist/{artistURL}");
 
             Artist artist = JsonConvert.DeserializeObject<Artist>(jsonData);
 
             return artist;
+        }
+
+        public async Task<List<Playlist>> GetPlaylist(ApiService api, string artist_slug)
+        {
+
+            string jsonData = await api.GetJson($"/artist/({artist_slug}/playlists");
+
+            List<Playlist> playlists = JsonConvert.DeserializeObject<List<Playlist>>(jsonData);
+
+            return playlists;
         }
 
     }
