@@ -12,15 +12,15 @@ namespace NapsterMobileDevelopment.Models
     public class Artist
     {
         [JsonProperty("id")]
-        string ID { get; set; }
+        public string ID { get; set; }
         [JsonProperty("name")]
-        string Name { get; set; }
-        [JsonProperty("image")]
-        string Image {  get; set; }
-        [JsonProperty("bio")]
-        string Bio { get; set; }
-        [JsonProperty("url-slug")]
-        string URLSlug { get; set; }
+        public string Name { get; set; }
+        //[JsonProperty("image")]
+        //string Image {  get; set; }
+      //  [JsonProperty("bio")]
+        //string Bio { get; set; }
+        //[JsonProperty("url-slug")]
+       // string URLSlug { get; set; }
 
 
 

@@ -518,3 +518,9 @@ C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\o
 C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt
 C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt.intermediate
 C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\obj\Debug\net10.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\bin\Debug\net10.0-windows10.0.19041.0\win-x64\album.scale-100.png
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\bin\Debug\net10.0-windows10.0.19041.0\win-x64\home.scale-100.png
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\bin\Debug\net10.0-windows10.0.19041.0\win-x64\search.scale-100.jpg
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\album.scale-100.png
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\home.scale-100.png
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\search.scale-100.jpg

@@ -15,17 +15,32 @@
 
             <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*">
 
-                <CollectionView ItemsSource="{Binding topArtists}" >
+                <CollectionView x:Name="CollectionViewTopArtists" ItemsSource="{Binding TopArtists}" >
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Grid ColumnDefinitions="*" RowDefinitions="4*,*">
-                                <Image Source="{Binding Image}"/>
                                 <Label Text="{Binding Name}" Grid.Row="0"/>
-
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
+
+            </Grid>
+
+            <Grid VerticalOptions="End" HorizontalOptions="Fill"  ColumnDefinitions="2*,*,*,*,*,*,2*" BackgroundColor="DarkGray">
+
+                <Grid RowDefinitions="*,*" Grid.Column="1">
+                    <ImageButton x:Name="HomePageButton" Source="home.png" BackgroundColor="DarkGray"/>
+                    <Label HorizontalOptions="Center" Text="Home" Grid.Column="1" Grid.Row="1"/>
+                </Grid>
+                <Grid RowDefinitions="*,*" Grid.Column="3">
+                    <ImageButton x:Name="SearchPageButton" Source="search.jpg"/>
+                    <Label HorizontalOptions="Center" Text="Search" Grid.Column="1" Grid.Row="1"/>
+                </Grid>
+                <Grid RowDefinitions="*,*" Grid.Column="5">
+                    <ImageButton x:Name="PlaylistPageButton" Source="album.png"/>
+                    <Label HorizontalOptions="Center" Text="Playlists" Grid.Column="1" Grid.Row="1"/>
+                </Grid>
 
             </Grid>
 

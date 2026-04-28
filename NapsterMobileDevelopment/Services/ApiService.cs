@@ -9,20 +9,38 @@ namespace NapsterMobileDevelopment.Services
 
     public class ApiService
     {
-        const string baseURL = "https://api.audiomack.com/v1";
-        HttpClient _client = new HttpClient();
+        const string baseURL = "https://musicbrainz.org/ws/2";
+        HttpClient _client;
+
+        public ApiService() 
+        {
+            _client = new HttpClient();
+            _client.DefaultRequestHeaders.UserAgent.ParseAdd("MusicApp/0.0.1 (20148847@tafe.wa.edu.au)");
+
+        }
 
         public async Task<string> GetJson(string url)
         {
-            string requestUrl = $"{baseURL}/{url}";
-            HttpRequestMessage request = new(HttpMethod.Get, requestUrl);
-            //request.Headers.Add("apiKey", "asuasfaadasd");
-            HttpResponseMessage response = await _client.SendAsync(request);
+            string requestUrl = $"{baseURL}/{url}?fmt=json";
+            //HttpRequestMessage request = new(HttpMethod.Get, requestUrl);
 
-            if (!response.IsSuccessStatusCode)
+            HttpResponseMessage? response = null;
+
+            try
+            {
+                response = await _client.GetAsync(requestUrl);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("");
+            }
+
+            if (response != null && !response.IsSuccessStatusCode)
             {
                 throw new HttpRequestException($"Failed to fetch Api response for query: {url}. Server responded: {response.StatusCode}");
             }
+
+            response.EnsureSuccessStatusCode();
 
             return await response.Content.ReadAsStringAsync();
 
@@ -42,7 +60,7 @@ namespace NapsterMobileDevelopment.Services
         public async Task<List<Playlist>> GetPlaylist(ApiService api, string artist_slug)
         {
 
-            string jsonData = await api.GetJson($"/artist/({artist_slug}/playlists");
+            string jsonData = await api.GetJson($"artist/{artist_slug}/playlists");
 
             List<Playlist> playlists = JsonConvert.DeserializeObject<List<Playlist>>(jsonData);
 
