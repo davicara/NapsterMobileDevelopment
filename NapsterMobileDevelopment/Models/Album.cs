@@ -1,26 +1,34 @@
 ﻿
+using NapsterMobileDevelopment.Services;
+using NapsterMobileDevelopment.Services.Responses;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 using System.Text.Json;
-using Newtonsoft.Json;
-using System.Linq.Expressions;
 
 
 namespace NapsterMobileDevelopment.Models
 {
 
-    public class CoverArt { }
     public class Album
     {
-        public Artist Artist { get; set; }
 
-        [JsonProperty("title")]
+
+        public string ID { get; set; }
         public string Title { get; set; }
 
-        [JsonProperty("cover-art-archive")]
-        public Dictionary<string, bool> CoverArt { get; set; }
+        public List<Track> Tracks { get; set; }
+        public bool CoverArt {  get; set; }
 
+        public Album(AlbumApiResponse apiResponse) 
+        { 
+            ID = apiResponse.ID;
+            Title = apiResponse.Title;
+            Tracks = apiResponse.Media[0].Tracks;
+            CoverArt = apiResponse.CoverArt.Artwork;
+        }
 
     }
 }

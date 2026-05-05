@@ -20,7 +20,8 @@ namespace NapsterMobileDevelopment
   
 
             InitializeComponent();
-            LoadArtists();
+            //LoadArtists();
+            LoadTopAlbums();
 
 
         }
@@ -38,6 +39,10 @@ namespace NapsterMobileDevelopment
         {
             //https://musicbrainz.org/ws/2/release/da13b81f-7b09-3fb6-b5c9-8551f22c797e?inc=aliases%2Bartist-credits%2Blabels%2Bdiscids%2Brecordings&fmt=json
 
+            TopAlbums.Add(await apiService.GetAlbum("da13b81f-7b09-3fb6-b5c9-8551f22c797e"));
+
+            BindingContext = null;
+            BindingContext = this;
         }
         public async void OnArtistClicked(object? sender, EventArgs e)
         {

@@ -18,6 +18,53 @@
           }
         }
       },
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -494,6 +541,28 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -505,6 +574,37 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.14": {
@@ -2516,6 +2616,53 @@
           }
         }
       },
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -2992,6 +3139,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -3003,6 +3166,37 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.14": {
@@ -5014,6 +5208,53 @@
           }
         }
       },
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -5490,6 +5731,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -5501,6 +5758,37 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.14": {
@@ -7512,6 +7800,53 @@
           }
         }
       },
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -7988,6 +8323,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -7999,6 +8350,37 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.14": {
@@ -10010,6 +10392,53 @@
           }
         }
       },
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -10486,6 +10915,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -10497,6 +10942,37 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.14": {
@@ -12508,6 +12984,53 @@
           }
         }
       },
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -12984,6 +13507,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -12995,6 +13534,37 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.14": {
@@ -14990,6 +15560,53 @@
       }
     },
     "net10.0-ios26.1": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -15453,6 +16070,28 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -15464,10 +16103,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-ios26.1/android-arm64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -15931,6 +16648,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -15942,10 +16675,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-ios26.1/android-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -16409,6 +17220,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -16420,10 +17247,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-ios26.1/iossimulator-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -16887,6 +17792,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -16898,10 +17819,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-ios26.1/maccatalyst-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -17365,6 +18364,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -17376,10 +18391,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-ios26.1/win-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -17843,6 +18936,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -17854,10 +18963,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-maccatalyst26.1": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -18321,6 +19508,28 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -18332,10 +19541,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-maccatalyst26.1/android-arm64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -18799,6 +20086,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -18810,10 +20113,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-maccatalyst26.1/android-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -19277,6 +20658,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -19288,10 +20685,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-maccatalyst26.1/iossimulator-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -19755,6 +21230,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -19766,10 +21257,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-maccatalyst26.1/maccatalyst-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -20233,6 +21802,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -20244,10 +21829,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-maccatalyst26.1/win-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -20711,6 +22374,22 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "type": "package",
         "compile": {
@@ -20723,9 +22402,87 @@
             "related": ".xml"
           }
         }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
       }
     },
     "net10.0-windows10.0.19041": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -21274,6 +23031,28 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
         "type": "package",
         "build": {
@@ -21452,9 +23231,87 @@
             "related": ".xml"
           }
         }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
       }
     },
     "net10.0-windows10.0.19041/android-arm64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -21975,6 +23832,22 @@
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
         "type": "package",
         "build": {
@@ -22118,10 +23991,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-windows10.0.19041/android-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -22642,6 +24593,22 @@
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
         "type": "package",
         "build": {
@@ -22785,10 +24752,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-windows10.0.19041/iossimulator-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -23309,6 +25354,22 @@
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
         "type": "package",
         "build": {
@@ -23452,10 +25513,88 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     },
     "net10.0-windows10.0.19041/maccatalyst-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -23976,6 +26115,22 @@
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
         "type": "package",
         "build": {
@@ -24120,9 +26275,87 @@
             "related": ".xml"
           }
         }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
       }
     },
     "net10.0-windows10.0.19041/win-x64": {
+      "MetaBrainz.Common/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -24649,6 +26882,22 @@
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
         "type": "package",
         "build": {
@@ -24797,6 +27046,37 @@
             "related": ".xml"
           }
         }
+      },
+      "System.Drawing.Common/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
       }
     }
   },
@@ -24822,6 +27102,60 @@
         "lib/net8.0-android34.0/GoogleGson.pdb",
         "lib/net8.0-android34.0/GoogleGson.xml",
         "readme.md"
+      ]
+    },
+    "MetaBrainz.Common/4.1.1": {
+      "sha512": "ovKr4BktLkKdGcMkKJihcGNPqvsPW4DXRmi051SbJICauVkKgnZFI51uWaHoQoO8Z6YBTqLzqam/GfRlMj0xcw==",
+      "type": "package",
+      "path": "metabrainz.common/4.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net10.0/MetaBrainz.Common.dll",
+        "lib/net10.0/MetaBrainz.Common.xml",
+        "lib/net8.0/MetaBrainz.Common.dll",
+        "lib/net8.0/MetaBrainz.Common.xml",
+        "metabrainz.common.4.1.1.nupkg.sha512",
+        "metabrainz.common.nuspec",
+        "package-icon.png"
+      ]
+    },
+    "MetaBrainz.Common.Json/7.2.0": {
+      "sha512": "e3lPRMTujYYzBzZI7GV3s4OwXdBViGGrdpvWf5J/PXFaasjEdkQvKpmwG26PplZ3atPRK8x3FRVgP4lOARAoLQ==",
+      "type": "package",
+      "path": "metabrainz.common.json/7.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net10.0/MetaBrainz.Common.Json.dll",
+        "lib/net10.0/MetaBrainz.Common.Json.xml",
+        "lib/net8.0/MetaBrainz.Common.Json.dll",
+        "lib/net8.0/MetaBrainz.Common.Json.xml",
+        "metabrainz.common.json.7.2.0.nupkg.sha512",
+        "metabrainz.common.json.nuspec",
+        "package-icon.png"
+      ]
+    },
+    "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+      "sha512": "sHU19W6glW+lBQ5vcGhl5PnJTUKyHpCXnNb2/B406k+azEErCGZG5ESUVwEOK1uq7caN9ZzBdn/M9lBX+xcDaw==",
+      "type": "package",
+      "path": "metabrainz.musicbrainz.coverart/7.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll",
+        "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.xml",
+        "lib/net8.0/MetaBrainz.MusicBrainz.CoverArt.dll",
+        "lib/net8.0/MetaBrainz.MusicBrainz.CoverArt.xml",
+        "metabrainz.musicbrainz.coverart.7.1.0.nupkg.sha512",
+        "metabrainz.musicbrainz.coverart.nuspec",
+        "package-icon.png"
       ]
     },
     "Microsoft.Extensions.Configuration/10.0.0": {
@@ -26132,6 +28466,41 @@
         "tools/wv2winrt/zh-Hant/System.CommandLine.resources.dll"
       ]
     },
+    "Microsoft.Win32.SystemEvents/10.0.0": {
+      "sha512": "bYdnhuD0XxcVTrxc8RyBjXo+AXYWJPnda3clhGz2Kakleyun1PyrzYV8RezT7ZYmR9OBSOgvpFQcvHo/K8Y90w==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net10.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net10.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.10.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Microsoft.Windows.SDK.BuildTools/10.0.22621.756": {
       "sha512": "7ZL2sFSioYm1Ry067Kw1hg0SCcW5kuVezC2SwjGbcPE61Nn+gTbH86T73G3LcEOVj0S3IZzNuE/29gZvOLS7VA==",
       "type": "package",
@@ -26928,6 +29297,59 @@
         "newtonsoft.json.13.0.4.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "System.Drawing.Common/10.0.0": {
+      "sha512": "kohT9ZZlkB5R5ifihCBnPJLdIUQGiTj1ZI6z4LKatr+F4MmIJJu7qQpBkqt9280ivtnSvlTx9qZEY+CpJ0zMkA==",
+      "type": "package",
+      "path": "system.drawing.common/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net10.0/System.Drawing.Common.dll",
+        "lib/net10.0/System.Drawing.Common.pdb",
+        "lib/net10.0/System.Drawing.Common.xml",
+        "lib/net10.0/System.Private.Windows.Core.dll",
+        "lib/net10.0/System.Private.Windows.Core.xml",
+        "lib/net10.0/System.Private.Windows.GdiPlus.dll",
+        "lib/net10.0/System.Private.Windows.GdiPlus.xml",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.pdb",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net8.0/System.Drawing.Common.dll",
+        "lib/net8.0/System.Drawing.Common.pdb",
+        "lib/net8.0/System.Drawing.Common.xml",
+        "lib/net8.0/System.Private.Windows.Core.dll",
+        "lib/net8.0/System.Private.Windows.Core.xml",
+        "lib/net8.0/System.Private.Windows.GdiPlus.dll",
+        "lib/net8.0/System.Private.Windows.GdiPlus.xml",
+        "lib/net9.0/System.Drawing.Common.dll",
+        "lib/net9.0/System.Drawing.Common.pdb",
+        "lib/net9.0/System.Drawing.Common.xml",
+        "lib/net9.0/System.Private.Windows.Core.dll",
+        "lib/net9.0/System.Private.Windows.Core.xml",
+        "lib/net9.0/System.Private.Windows.GdiPlus.dll",
+        "lib/net9.0/System.Private.Windows.GdiPlus.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.pdb",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.drawing.common.10.0.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "Xamarin.Android.Glide/4.16.0.14": {
@@ -29311,24 +31733,28 @@
   },
   "projectFileDependencyGroups": {
     "net10.0-android36.0": [
+      "MetaBrainz.MusicBrainz.CoverArt >= 7.1.0",
       "Microsoft.Extensions.Logging.Debug >= 10.0.0",
       "Microsoft.Maui.Controls >= 10.0.1",
       "Microsoft.NET.ILLink.Tasks >= 10.0.2",
       "Newtonsoft.Json >= 13.0.4"
     ],
     "net10.0-ios26.1": [
+      "MetaBrainz.MusicBrainz.CoverArt >= 7.1.0",
       "Microsoft.Extensions.Logging.Debug >= 10.0.0",
       "Microsoft.Maui.Controls >= 10.0.1",
       "Microsoft.NET.ILLink.Tasks >= 10.0.2",
       "Newtonsoft.Json >= 13.0.4"
     ],
     "net10.0-maccatalyst26.1": [
+      "MetaBrainz.MusicBrainz.CoverArt >= 7.1.0",
       "Microsoft.Extensions.Logging.Debug >= 10.0.0",
       "Microsoft.Maui.Controls >= 10.0.1",
       "Microsoft.NET.ILLink.Tasks >= 10.0.2",
       "Newtonsoft.Json >= 13.0.4"
     ],
     "net10.0-windows10.0.19041": [
+      "MetaBrainz.MusicBrainz.CoverArt >= 7.1.0",
       "Microsoft.Extensions.Logging.Debug >= 10.0.0",
       "Microsoft.Maui.Controls >= 10.0.1",
       "Newtonsoft.Json >= 13.0.4"
@@ -29401,6 +31827,10 @@
       "net10.0-android36.0": {
         "targetAlias": "net10.0-android",
         "dependencies": {
+          "MetaBrainz.MusicBrainz.CoverArt": {
+            "target": "Package",
+            "version": "[7.1.0, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[10.0.0, )"
@@ -29721,6 +32151,10 @@
       "net10.0-ios26.1": {
         "targetAlias": "net10.0-ios",
         "dependencies": {
+          "MetaBrainz.MusicBrainz.CoverArt": {
+            "target": "Package",
+            "version": "[7.1.0, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[10.0.0, )"
@@ -30041,6 +32475,10 @@
       "net10.0-maccatalyst26.1": {
         "targetAlias": "net10.0-maccatalyst",
         "dependencies": {
+          "MetaBrainz.MusicBrainz.CoverArt": {
+            "target": "Package",
+            "version": "[7.1.0, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[10.0.0, )"
@@ -30362,6 +32800,10 @@
       "net10.0-windows10.0.19041": {
         "targetAlias": "net10.0-windows10.0.19041.0",
         "dependencies": {
+          "MetaBrainz.MusicBrainz.CoverArt": {
+            "target": "Package",
+            "version": "[7.1.0, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[10.0.0, )"

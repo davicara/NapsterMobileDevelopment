@@ -1,8 +1,9 @@
-﻿using System;
+﻿using NapsterMobileDevelopment.Models;
+using NapsterMobileDevelopment.Services.Responses;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using NapsterMobileDevelopment.Models;
-using Newtonsoft.Json;
 
 namespace NapsterMobileDevelopment.Services
 {
@@ -21,7 +22,7 @@ namespace NapsterMobileDevelopment.Services
 
         public async Task<string> GetJson(string url)
         {
-            string requestUrl = $"{baseURL}/{url}?fmt=json";
+            string requestUrl = $"{baseURL}/{url}fmt=json";
             //HttpRequestMessage request = new(HttpMethod.Get, requestUrl);
 
             HttpResponseMessage? response = null;
@@ -50,13 +51,22 @@ namespace NapsterMobileDevelopment.Services
         public async Task<Artist> GetArtist(string artistURL)
         {
 
-            string jsonData = await GetJson($"artist/{artistURL}");
+            string jsonData = await GetJson($"artist/{artistURL}?");
 
             Artist artist = JsonConvert.DeserializeObject<Artist>(jsonData);
 
             return artist;
         }
 
+        public async Task<Album> GetAlbum(string albumURL)
+        {
+            string jsonData = await GetJson($"release/{albumURL}?inc=recordings&");
+
+            AlbumApiResponse albumResponse = JsonConvert.DeserializeObject<AlbumApiResponse>(jsonData);
+
+            return new Album(albumResponse);
+
+        }
         public async Task<List<Playlist>> GetPlaylist(ApiService api, string artist_slug)
         {
 
