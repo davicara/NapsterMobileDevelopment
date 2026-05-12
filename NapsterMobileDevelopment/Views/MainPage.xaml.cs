@@ -38,8 +38,13 @@ namespace NapsterMobileDevelopment
         public async Task LoadTopAlbums()
         {
             //https://musicbrainz.org/ws/2/release/da13b81f-7b09-3fb6-b5c9-8551f22c797e?inc=aliases%2Bartist-credits%2Blabels%2Bdiscids%2Brecordings&fmt=json
+            //Task T1 = apiService.GetAlbum("da13b81f-7b09-3fb6-b5c9-8551f22c797e");
+            //Task T2 = apiService.GetAlbum("12bd0263-9907-4fb4-964a-b94d8784bc30");
+
+            //await Task.WhenAll([T1, T2]);
 
             TopAlbums.Add(await apiService.GetAlbum("da13b81f-7b09-3fb6-b5c9-8551f22c797e"));
+            //TopAlbums.Add(await apiService.GetAlbum("12bd0263-9907-4fb4-964a-b94d8784bc30"));
 
             BindingContext = null;
             BindingContext = this;

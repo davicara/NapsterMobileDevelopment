@@ -1,5 +1,4 @@
-﻿
-using NapsterMobileDevelopment.Services;
+﻿using NapsterMobileDevelopment.Services;
 using NapsterMobileDevelopment.Services.Responses;
 using Newtonsoft.Json;
 using System;
@@ -20,14 +19,22 @@ namespace NapsterMobileDevelopment.Models
         public string Title { get; set; }
 
         public List<Track> Tracks { get; set; }
-        public bool CoverArt {  get; set; }
+        public string CoverArt {  get; set; }
 
-        public Album(AlbumApiResponse apiResponse) 
+        public Album(AlbumApiResponse apiResponse, string? image) 
         { 
             ID = apiResponse.ID;
             Title = apiResponse.Title;
             Tracks = apiResponse.Media[0].Tracks;
-            CoverArt = apiResponse.CoverArt.Artwork;
+
+            if (image != null)
+            {
+                CoverArt = image;
+            }
+            else
+            {
+                CoverArt = "NapsterMobileDevelopment/Resources/ImageSource/album.png";
+            }
         }
 
     }

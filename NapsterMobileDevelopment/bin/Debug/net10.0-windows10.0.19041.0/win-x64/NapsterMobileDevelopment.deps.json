@@ -9,6 +9,7 @@
     ".NETCoreApp,Version=v10.0/win-x64": {
       "NapsterMobileDevelopment/1.0": {
         "dependencies": {
+          "MetaBrainz.MusicBrainz.CoverArt": "7.1.0",
           "Microsoft.Extensions.Logging.Debug": "10.0.0",
           "Microsoft.Maui.Controls": "10.0.1",
           "Newtonsoft.Json": "13.0.4",
@@ -28,6 +29,38 @@
           "WinRT.Runtime.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.48161"
+          }
+        }
+      },
+      "MetaBrainz.Common/4.1.1": {
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.1.0"
+          }
+        }
+      },
+      "MetaBrainz.Common.Json/7.2.0": {
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1"
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.Common.Json.dll": {
+            "assemblyVersion": "7.2.0.0",
+            "fileVersion": "7.2.0.0"
+          }
+        }
+      },
+      "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+        "dependencies": {
+          "MetaBrainz.Common": "4.1.1",
+          "MetaBrainz.Common.Json": "7.2.0",
+          "System.Drawing.Common": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/MetaBrainz.MusicBrainz.CoverArt.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.0.0"
           }
         }
       },
@@ -395,6 +428,14 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.0": {
+        "runtime": {
+          "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          }
+        }
+      },
       "Microsoft.WindowsAppSDK/1.7.250909003": {
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.3179.45"
@@ -518,6 +559,25 @@
           }
         }
       },
+      "System.Drawing.Common/10.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          },
+          "lib/net10.0/System.Private.Windows.Core.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          },
+          "lib/net10.0/System.Private.Windows.GdiPlus.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          }
+        }
+      },
       "Microsoft.Web.WebView2.Core.Projection/1.0.3179.45": {
         "runtime": {
           "Microsoft.Web.WebView2.Core.Projection.dll": {
@@ -538,6 +598,27 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
+    },
+    "MetaBrainz.Common/4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ovKr4BktLkKdGcMkKJihcGNPqvsPW4DXRmi051SbJICauVkKgnZFI51uWaHoQoO8Z6YBTqLzqam/GfRlMj0xcw==",
+      "path": "metabrainz.common/4.1.1",
+      "hashPath": "metabrainz.common.4.1.1.nupkg.sha512"
+    },
+    "MetaBrainz.Common.Json/7.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e3lPRMTujYYzBzZI7GV3s4OwXdBViGGrdpvWf5J/PXFaasjEdkQvKpmwG26PplZ3atPRK8x3FRVgP4lOARAoLQ==",
+      "path": "metabrainz.common.json/7.2.0",
+      "hashPath": "metabrainz.common.json.7.2.0.nupkg.sha512"
+    },
+    "MetaBrainz.MusicBrainz.CoverArt/7.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sHU19W6glW+lBQ5vcGhl5PnJTUKyHpCXnNb2/B406k+azEErCGZG5ESUVwEOK1uq7caN9ZzBdn/M9lBX+xcDaw==",
+      "path": "metabrainz.musicbrainz.coverart/7.1.0",
+      "hashPath": "metabrainz.musicbrainz.coverart.7.1.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/10.0.0": {
       "type": "package",
@@ -693,6 +774,13 @@
       "path": "microsoft.web.webview2/1.0.3179.45",
       "hashPath": "microsoft.web.webview2.1.0.3179.45.nupkg.sha512"
     },
+    "Microsoft.Win32.SystemEvents/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bYdnhuD0XxcVTrxc8RyBjXo+AXYWJPnda3clhGz2Kakleyun1PyrzYV8RezT7ZYmR9OBSOgvpFQcvHo/K8Y90w==",
+      "path": "microsoft.win32.systemevents/10.0.0",
+      "hashPath": "microsoft.win32.systemevents.10.0.0.nupkg.sha512"
+    },
     "Microsoft.WindowsAppSDK/1.7.250909003": {
       "type": "package",
       "serviceable": true,
@@ -706,6 +794,13 @@
       "sha512": "sha512-pdgNNMai3zv51W5aq268sujXUyx7SNdE2bj1wZcWjAQrKMFZV260lbqYop1d2GM67JI1huLRwxo9ZqnfF/lC6A==",
       "path": "newtonsoft.json/13.0.4",
       "hashPath": "newtonsoft.json.13.0.4.nupkg.sha512"
+    },
+    "System.Drawing.Common/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kohT9ZZlkB5R5ifihCBnPJLdIUQGiTj1ZI6z4LKatr+F4MmIJJu7qQpBkqt9280ivtnSvlTx9qZEY+CpJ0zMkA==",
+      "path": "system.drawing.common/10.0.0",
+      "hashPath": "system.drawing.common.10.0.0.nupkg.sha512"
     },
     "Microsoft.Web.WebView2.Core.Projection/1.0.3179.45": {
       "type": "reference",

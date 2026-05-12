@@ -524,3 +524,10 @@ C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\b
 C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\album.scale-100.png
 C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\home.scale-100.png
 C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\search.scale-100.jpg
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\bin\Debug\net10.0-windows10.0.19041.0\win-x64\MetaBrainz.Common.dll
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\bin\Debug\net10.0-windows10.0.19041.0\win-x64\MetaBrainz.Common.Json.dll
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\bin\Debug\net10.0-windows10.0.19041.0\win-x64\MetaBrainz.MusicBrainz.CoverArt.dll
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.Win32.SystemEvents.dll
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\bin\Debug\net10.0-windows10.0.19041.0\win-x64\System.Drawing.Common.dll
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\bin\Debug\net10.0-windows10.0.19041.0\win-x64\System.Private.Windows.Core.dll
+C:\Users\CARRAD\source\repos\NapsterMobileDevelopment\NapsterMobileDevelopment\bin\Debug\net10.0-windows10.0.19041.0\win-x64\System.Private.Windows.GdiPlus.dll

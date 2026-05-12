@@ -18,8 +18,9 @@
                 <CollectionView x:Name="CollectionViewTopArtists" ItemsSource="{Binding TopAlbums}" >
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Grid ColumnDefinitions="*" RowDefinitions="4*,*">
-                                <Label Text="{Binding Title}" Grid.Row="0"/>
+                            <Grid ColumnDefinitions="*" RowDefinitions="3*,*">
+                                <Image Source="{Binding CoverArt}" Grid.Row="0"/>
+                                <Label Text="{Binding Title}" Grid.Row="1"/>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
