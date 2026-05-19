@@ -4,7 +4,13 @@
              xmlns:local="clr-namespace:NapsterMobileDevelopment"
              x:Class="NapsterMobileDevelopment.App">
     <Application.Resources>
+
         <ResourceDictionary>
+
+            <Style TargetType="Label">
+                <Setter Property="FontAutoScalingEnabled" Value="True"/>
+            </Style>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

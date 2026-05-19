@@ -16,7 +16,7 @@ namespace NapsterMobileDevelopment.Services.Responses
             public int TrackCount { get; set; }
 
             [JsonProperty("tracks")]
-            public List<Track> Tracks { get; set; }
+            public List<TrackApiResponse> Tracks { get; set; }
 
 
         }
@@ -28,8 +28,23 @@ namespace NapsterMobileDevelopment.Services.Responses
             public bool Artwork { get; set; }
 
             [JsonProperty("front")]
-            public bool Front {  get; set; }
+            public bool Front { get; set; }
         }
+
+        public class ArtistCredit
+        {
+            [JsonProperty("artist")]
+            public ArtistData ArtistInfo { get; set; }
+            [JsonProperty("name")]
+            public string Name { get; set; }
+        }
+
+        public class ArtistData
+        {
+            [JsonProperty("id")]
+            public string ID { get; set; }
+        }
+
 
         [JsonProperty("id")]
         public string ID { get; set; }
@@ -41,9 +56,13 @@ namespace NapsterMobileDevelopment.Services.Responses
         public List<Medium> Media { get; set; }
 
         [JsonProperty("cover-art-archive")]
-        public CoverArtArchive CoverArt {  get; set; }
+        public CoverArtArchive CoverArt { get; set; }
 
+        [JsonProperty("artist-credit")]
+        public List<ArtistCredit> ArtistCredits { get; set; }
 
 
     }
 }
+
+

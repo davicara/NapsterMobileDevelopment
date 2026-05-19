@@ -3,55 +3,75 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NapsterMobileDevelopment.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
+    <Grid RowDefinitions="8*,*">
+
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout
+            Padding="5,0"
             Spacing="25">
 
-            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*">
-                
-                
-            </Grid>
+                <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*">
 
-            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*">
 
-                <CollectionView x:Name="CollectionViewTopArtists" ItemsSource="{Binding TopAlbums}" >
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid ColumnDefinitions="*" RowDefinitions="3*,*">
-                                <Image Source="{Binding CoverArt}" Grid.Row="0"/>
-                                <Label Text="{Binding Title}" Grid.Row="1"/>
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-
-            </Grid>
-
-            <Grid VerticalOptions="End" HorizontalOptions="Fill"  ColumnDefinitions="2*,*,*,*,*,*,2*" BackgroundColor="DarkGray">
-
-                <Grid RowDefinitions="*,*" Grid.Column="1">
-                    <ImageButton x:Name="HomePageButton" Source="home.png" BackgroundColor="DarkGray"/>
-                    <Label HorizontalOptions="Center" Text="Home" Grid.Column="1" Grid.Row="1"/>
-                </Grid>
-                <Grid RowDefinitions="*,*" Grid.Column="3">
-                    <ImageButton x:Name="SearchPageButton" Source="search.jpg"/>
-                    <Label HorizontalOptions="Center" Text="Search" Grid.Column="1" Grid.Row="1"/>
-                </Grid>
-                <Grid RowDefinitions="*,*" Grid.Column="5">
-                    <ImageButton x:Name="PlaylistPageButton" Source="album.png"/>
-                    <Label HorizontalOptions="Center" Text="Playlists" Grid.Column="1" Grid.Row="1"/>
                 </Grid>
 
-            </Grid>
+                <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*">
 
-            <Button
+                    <CollectionView x:Name="CollectionViewTopArtists" ItemsSource="{Binding TopAlbums}" ItemsLayout="VerticalGrid, 2" ItemSizingStrategy="MeasureAllItems">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid ColumnDefinitions="3.5*,7*" RowDefinitions="*" HeightRequest="65" Padding="3" >
+                                    <Button BackgroundColor="Gray" Grid.ColumnSpan="3" Clicked="AlbumClicked"/>
+
+                                    <Label Text="{Binding Title}" Grid.Column="2" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="5" FontAttributes="Bold" TextColor="White" />
+
+                                    <Border Padding="0" StrokeThickness="0">
+
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="9"/>
+                                        </Border.StrokeShape>
+
+                                        <Image Source="{Binding CoverArt}" Aspect="AspectFill"/>
+
+                                    </Border>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </Grid>
+
+                <Button
                 x:Name="ArtistButton"
                 Text="Click me" 
                 
                 Clicked="OnArtistClicked"
                 HorizontalOptions="Fill" />
-        </VerticalStackLayout>
-    </ScrollView>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Grid Grid.Row="1" VerticalOptions="End" HorizontalOptions="Fill"  ColumnDefinitions="2*,*,*,*,*,*,2*" BackgroundColor="DarkGray" HeightRequest="75">
+
+            <Grid RowDefinitions="*,*" Grid.Column="0" VerticalOptions="Center">
+                <Button x:Name="HomePageButton" BackgroundColor="DarkGray" Grid.RowSpan="2"/>
+                <Image Source="home.png"/>
+                <Label HorizontalOptions="Center" Text="Home" Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+            <Grid RowDefinitions="*,*" Grid.Column="3" VerticalOptions="Center">
+                <Button x:Name="SearchPageButton" BackgroundColor="DarkGray" Grid.RowSpan="2"/>
+                <Image Source="search.jpg"/>
+                <Label HorizontalOptions="Center" Text="Search" Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+            <Grid RowDefinitions="*,*" Grid.Column="7" VerticalOptions="Center">
+                <Button x:Name="PlaylistPageButton" BackgroundColor="DarkGray" Grid.RowSpan="2"/>
+                <Image Source="album.png"/>
+                <Label HorizontalOptions="Center" Text="Playlists" Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+        </Grid>
+    </Grid>
+
+
+
 
 </ContentPage>

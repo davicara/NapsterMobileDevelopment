@@ -17,12 +17,11 @@ namespace NapsterMobileDevelopment
 
         public MainPage()
         {
-  
+            List<string> TopAlbumIds = ["da13b81f-7b09-3fb6-b5c9-8551f22c797e", "eca6d001-35bb-4a1a-9bcb-8efd15814cc0", "80789e06-8449-45e7-92ca-d406b95738ed", "bc2b7291-11f1-4307-8191-df5639f96207", "6dd43823-4932-4b89-bdf2-968f463d6611"];
 
             InitializeComponent();
             //LoadArtists();
-            LoadTopAlbums();
-
+            LoadTopAlbums(TopAlbumIds);
 
         }
 
@@ -35,19 +34,34 @@ namespace NapsterMobileDevelopment
             BindingContext = this;
         }
 
-        public async Task LoadTopAlbums()
+        public async Task LoadTopAlbums(List<string> albumsIDs)
         {
-            //https://musicbrainz.org/ws/2/release/da13b81f-7b09-3fb6-b5c9-8551f22c797e?inc=aliases%2Bartist-credits%2Blabels%2Bdiscids%2Brecordings&fmt=json
-            //Task T1 = apiService.GetAlbum("da13b81f-7b09-3fb6-b5c9-8551f22c797e");
-            //Task T2 = apiService.GetAlbum("12bd0263-9907-4fb4-964a-b94d8784bc30");
 
-            //await Task.WhenAll([T1, T2]);
+            List<Task<Album>> aList = [];
+            foreach (string ID in albumsIDs)
+            {
+                aList.Add(apiService.GetAlbum(ID));
+            }
 
-            TopAlbums.Add(await apiService.GetAlbum("da13b81f-7b09-3fb6-b5c9-8551f22c797e"));
+            await Task.WhenAll(aList);
+
+            TopAlbums.AddRange(aList.Select((task) => task.Result));
+
+
+            //TopAlbums.Add(await apiService.GetAlbum("da13b81f-7b09-3fb6-b5c9-8551f22c797e"));
             //TopAlbums.Add(await apiService.GetAlbum("12bd0263-9907-4fb4-964a-b94d8784bc30"));
 
             BindingContext = null;
             BindingContext = this;
+        }
+
+        public async void AlbumClicked(object? sender, EventArgs e)
+        {
+
+            Album album = (sender as Button)?.BindingContext as Album;
+
+            await Navigation.PushAsync(new Views.AlbumPage(album));
+
         }
         public async void OnArtistClicked(object? sender, EventArgs e)
         {

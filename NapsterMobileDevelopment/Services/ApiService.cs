@@ -91,7 +91,7 @@ namespace NapsterMobileDevelopment.Services
 
         public async Task<Album> GetAlbum(string albumURL)
         {
-            string jsonData = await GetJson($"release/{albumURL}?inc=recordings&");
+            string jsonData = await GetJson($"release/{albumURL}?inc=artist-credits+recordings&");
            
 
             AlbumApiResponse albumResponse = JsonConvert.DeserializeObject<AlbumApiResponse>(jsonData);
