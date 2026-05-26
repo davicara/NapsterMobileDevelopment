@@ -14,10 +14,11 @@ namespace NapsterMobileDevelopment.Models
     public class Album
     {
 
-
+        [JsonProperty("id")]
         public string ID { get; set; }
+        [JsonProperty("title")]
         public string Title { get; set; }
-
+        [JsonProperty("tracks")]
         public List<Track> Tracks { get; set; } = new List<Track>();
         public string CoverArt {  get; set; }
 
@@ -26,7 +27,8 @@ namespace NapsterMobileDevelopment.Models
         public string ArtistID { get; set; }
 
         public Album(AlbumApiResponse apiResponse, string? image) 
-        { 
+        {
+            if (apiResponse == null) return;
 
             foreach (TrackApiResponse track in apiResponse.Media[0].Tracks)
             {

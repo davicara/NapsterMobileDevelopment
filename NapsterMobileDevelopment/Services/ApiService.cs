@@ -45,7 +45,7 @@ namespace NapsterMobileDevelopment.Services
 
             if (response != null && !response.IsSuccessStatusCode)
             {
-                throw new HttpRequestException($"Failed to fetch Api response for query: {url}. Server responded: {response.StatusCode}");
+                throw new HttpRequestException($"Failed to fetch Api response for query: {baseURL}/{url}fmt=json. Server responded: {response.StatusCode}");
             }
 
             response.EnsureSuccessStatusCode();
@@ -82,16 +82,18 @@ namespace NapsterMobileDevelopment.Services
         public async Task<Artist> GetArtist(string artistURL)
         {
 
-            string jsonData = await GetJson($"artist/{artistURL}?");
+            string jsonData = await GetJson($"artist/{artistURL}?inc=release-groups+releases+artist-credits&");
 
-            Artist artist = JsonConvert.DeserializeObject<Artist>(jsonData);
 
-            return artist;
+            ArtistApiResponse artistResponse = JsonConvert.DeserializeObject<ArtistApiResponse>(jsonData);
+
+
+            return new Artist(artistResponse);
         }
 
         public async Task<Album> GetAlbum(string albumURL)
         {
-            string jsonData = await GetJson($"release/{albumURL}?inc=artist-credits+recordings&");
+            string jsonData = await GetJson($"release/{albumURL}?inc=artist-credits+recordings&", true);
            
 
             AlbumApiResponse albumResponse = JsonConvert.DeserializeObject<AlbumApiResponse>(jsonData);

@@ -21,11 +21,11 @@ namespace NapsterMobileDevelopment.Services.Responses
         [JsonProperty("title")]
         public string Title { get; set; }
 
-        [JsonProperty("length")]
-        public int Length { get; set; }
 
         [JsonProperty("artist-credit")]
         public List<Credit> Credits { get; set; }
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
     }
 }

@@ -3,13 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NapsterMobileDevelopment.Views.AlbumPage"
              Title="AlbumPage">
+    
 
     <ScrollView BackgroundColor="Black">
         <VerticalStackLayout Padding="5,0" Spacing="2">
 
 
             <Image Source="{Binding CoverArt}"/>
-            <Label Text="{Binding ArtistName}" TextColor="White" FontSize="Large" FontAttributes="Bold"/>
+
+            <Button x:Name="ArtistButton" Text="{Binding ArtistName}" TextColor="White" HorizontalOptions="Start" WidthRequest="150" Padding="1" Margin="-10" HeightRequest="2" BackgroundColor="Transparent" FontSize="Large" FontAttributes="Bold" Clicked="ArtistButtonClicked" ContentLayout="Left,1"/>
             <Label Text="Album" TextColor="Gray" />
 
             <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*" Padding="0,20">

@@ -13,7 +13,6 @@ namespace NapsterMobileDevelopment.Models
 
         public string Title { get; set; }
 
-        public int Length { get; set; }
 
         public List<Artist> Credits { get; set; } = new List<Artist>();
 
@@ -23,7 +22,6 @@ namespace NapsterMobileDevelopment.Models
         {
             
             Title = apiData.Title;
-            Length = apiData.Length;
 
             string credits = string.Empty;
             foreach (var credit in apiData.Credits)
