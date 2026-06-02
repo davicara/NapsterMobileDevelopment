@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using NapsterMobileDevelopment.Services;
 
 namespace NapsterMobileDevelopment
 {
@@ -15,8 +16,10 @@ namespace NapsterMobileDevelopment
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<ApiService>();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

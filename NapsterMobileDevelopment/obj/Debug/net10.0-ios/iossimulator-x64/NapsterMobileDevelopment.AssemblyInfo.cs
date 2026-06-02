@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NapsterMobileDevelopment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+cc635ff40f370122fad766c4c3f3c50d17f19927")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+a42db185433e1d400f1cff473ac08dd5120e919f")]
 [assembly: System.Reflection.AssemblyProductAttribute("NapsterMobileDevelopment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NapsterMobileDevelopment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

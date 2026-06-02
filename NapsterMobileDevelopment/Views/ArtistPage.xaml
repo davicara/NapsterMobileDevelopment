@@ -1,71 +1,79 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:NapsterMobileDevelopment.Views"
              x:Class="NapsterMobileDevelopment.Views.ArtistPage"
              Title="ArtistPage">
 
-    <Grid RowDefinitions="*,15*" BackgroundColor="Black">
-        <Label Grid.Row="0" Text="{Binding ArtistClass.Name}" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
+    <Grid RowDefinitions="8*,auto">
+        <Grid RowDefinitions="*,15*" BackgroundColor="Black">
+            <Label Grid.Row="0" Text="{Binding ArtistClass.Name}" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
 
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="5,0" Spacing="2">
-
-
-                <Image Source="no_image.png"/>
-                <Label Text="{Binding ArtistClass.Name}" TextColor="White" FontSize="Large" FontAttributes="Bold"/>
-                <Label Text="Artist" TextColor="Gray" />
-                <Label Text="Popular Tracks" TextColor="White"  Margin="0,50, 0, -20" FontAttributes="Bold" FontSize="Medium"  />
-
-                <Grid ColumnDefinitions="*" RowDefinitions="*,*" Padding="0,20">
-
-                    <CollectionView x:Name="CollectionViewTopArtists" ItemsSource="{Binding PopularTracks}" ItemsLayout="VerticalGrid" ItemSizingStrategy="MeasureAllItems">
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid ColumnDefinitions="10*,*" RowDefinitions="2*,2*" HeightRequest="50" Padding="3" >
-                                    <Button Opacity="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Clicked="AlbumClicked"/>
-
-                                    <Label Text="{Binding Title}" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="2" FontAttributes="Bold" TextColor="White" />
-                                    <Label Text="{Binding StringCredits}" Grid.Row="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Start" Padding="2" TextColor="LightGray" />
-                                </Grid>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
-
-                    <Border Grid.Row="1" >
-                        <Button x:Name="ShowMoreButton" Clicked="ShowMore" Text="Show More..." Grid.Row="1" BackgroundColor="Transparent"/>
-                    </Border>
-
-                </Grid>
-
-                <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*">
-
-                    <CollectionView x:Name="CollectionViewAlbum" ItemsSource="{Binding Albums}" ItemSizingStrategy="MeasureAllItems">
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid ColumnDefinitions="3.5*,7*" RowDefinitions="*" HeightRequest="65" Padding="3" >
-                                    <Button BackgroundColor="Gray" Grid.ColumnSpan="3" Clicked="AlbumClicked"/>
-
-                                    <Label Text="{Binding Title}" Grid.Column="2" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="5" FontAttributes="Bold" TextColor="White" />
-
-                                    <Border Padding="0" StrokeThickness="0">
-
-                                        <Border.StrokeShape>
-                                            <RoundRectangle CornerRadius="9"/>
-                                        </Border.StrokeShape>
+            <ScrollView Grid.Row="1">
+                <VerticalStackLayout Padding="5,0" Spacing="2">
 
 
-                                    </Border>
-                                </Grid>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
+                    <Image Source="no_image.png"/>
+                    <Label Text="{Binding ArtistClass.Name}" TextColor="White" FontSize="Large" FontAttributes="Bold"/>
+                    <Label Text="Artist" TextColor="Gray" />
+                    <Label Text="Popular Tracks" TextColor="White"  Margin="0,50, 0, -20" FontAttributes="Bold" FontSize="Medium"  />
 
-                </Grid>
+                    <Grid ColumnDefinitions="*" RowDefinitions="*,*" Padding="0,20">
 
-            </VerticalStackLayout>
+                        <CollectionView x:Name="CollectionViewTopArtists" ItemsSource="{Binding PopularTracks}" ItemsLayout="VerticalGrid" ItemSizingStrategy="MeasureAllItems">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid ColumnDefinitions="10*,*" RowDefinitions="2*,2*" HeightRequest="50" Padding="3" >
+                                        <Button Opacity="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Clicked="AlbumClicked"/>
 
-        </ScrollView>
+                                        <Label Text="{Binding Title}" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="2" FontAttributes="Bold" TextColor="White" />
+                                        <Label Text="{Binding StringCredits}" Grid.Row="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Start" Padding="2" TextColor="LightGray" />
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
 
+                        <Border Grid.Row="1" >
+                            <Button x:Name="ShowMoreButton" Clicked="ShowMore" Text="Show More..." Grid.Row="1" BackgroundColor="Transparent"/>
+                        </Border>
+
+                    </Grid>
+
+                    <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*">
+
+                        <CollectionView x:Name="CollectionViewAlbum" ItemsSource="{Binding Albums}" ItemSizingStrategy="MeasureAllItems">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid ColumnDefinitions="3.5*,7*" RowDefinitions="*" HeightRequest="65" Padding="3" >
+                                        <Button BackgroundColor="Gray" Grid.ColumnSpan="3" Clicked="AlbumClicked"/>
+
+                                        <Label Text="{Binding Title}" Grid.Column="2" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="5" FontAttributes="Bold" TextColor="White" />
+
+
+                                        <Label Text="{Binding ID}" Opacity="0" />
+
+                                        <Border Padding="0" StrokeThickness="0">
+
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="9"/>
+                                            </Border.StrokeShape>
+
+
+                                        </Border>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                    </Grid>
+
+                </VerticalStackLayout>
+
+            </ScrollView>
+
+        </Grid>
+
+        <views:Toolbar Grid.Row="1"/>
     </Grid>
 
 </ContentPage>

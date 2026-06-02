@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NapsterMobileDevelopment.Views.Toolbar">
+
+
+    <Grid
+        VerticalOptions="End"
+        ColumnDefinitions="2*,*,*,*,*,*,2*"
+        BackgroundColor="Black"
+        HeightRequest="75"
+        Opacity=".5">
+
+        <Grid RowDefinitions="*,*" Grid.Column="0">
+            <Button x:Name="HomePageButton"
+                    BackgroundColor="Transparent"
+                    Grid.RowSpan="2" 
+                    Clicked="HomePageClicked"/>
+            <Image Source="home.png" />
+            <Label Text="Home"
+                   HorizontalOptions="Center"
+                   Grid.Row="1" />
+        </Grid>
+
+        <Grid RowDefinitions="*,*" Grid.Column="3">
+            <Button x:Name="SearchPageButton"
+                    BackgroundColor="Transparent"
+                    Grid.RowSpan="2"
+                    Clicked="SearchPageClicked"/>
+            <Image Source="search.jpg" />
+            <Label Text="Search"
+                   HorizontalOptions="Center"
+                   Grid.Row="1" />
+        </Grid>
+
+        <Grid RowDefinitions="*,*" Grid.Column="6">
+            <Button x:Name="PlaylistPageButton"
+                    BackgroundColor="Transparent"
+                    Grid.RowSpan="2" />
+            <Image Source="album.png" />
+            <Label Text="Playlists"
+                   HorizontalOptions="Center"
+                   Grid.Row="1" />
+        </Grid>
+
+    </Grid>
+
+
+</ContentView>

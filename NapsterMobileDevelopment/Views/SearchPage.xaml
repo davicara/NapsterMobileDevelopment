@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:NapsterMobileDevelopment.Views"
+             x:Class="NapsterMobileDevelopment.Views.SearchPage"
+             Title="SearchPage">
+
+
+
+    <Grid RowDefinitions="8*, auto">
+
+
+        <VerticalStackLayout Margin="20,0">
+
+            <Grid ColumnDefinitions="3*,*">
+                <SearchBar Grid.Column="0" x:Name="searchBar" Placeholder="Search..." HorizontalOptions="Fill" SearchButtonPressed="SearchPressed" />
+                <Picker x:Name="filterPicker"
+                        Title="Select option"
+                        SelectedIndexChanged="OnFilterChanged" 
+                        Grid.Column="1"/>
+            </Grid>
+
+            <CollectionView x:Name="CollectionViewTopAlbums" ItemsSource="{Binding Albums}" ItemsLayout="VerticalGrid" ItemSizingStrategy="MeasureAllItems">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="10*,*" RowDefinitions="2*,2*" HeightRequest="50" Padding="3" >
+                            <Button Opacity="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Clicked="AlbumClicked"/>
+
+                            <Label Text="{Binding Title}" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="2" FontAttributes="Bold" TextColor="White" />
+                            <Label Text="{Binding StringCredits}" Grid.Row="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Start" Padding="2" TextColor="LightGray" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <CollectionView x:Name="CollectionViewTopTracks" ItemsSource="{Binding Tracks}" ItemsLayout="VerticalGrid" ItemSizingStrategy="MeasureAllItems">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="10*,*" RowDefinitions="2*,2*" HeightRequest="50" Padding="3" >
+                            <Button Opacity="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Clicked="AlbumClicked"/>
+
+                            <Label Text="{Binding Title}" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="2" FontAttributes="Bold" TextColor="White" />
+                            <Label Text="{Binding StringCredits}" Grid.Row="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Start" Padding="2" TextColor="LightGray" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <CollectionView x:Name="CollectionViewTopArtists" ItemsSource="{Binding Artists}" ItemsLayout="VerticalGrid" ItemSizingStrategy="MeasureAllItems">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="10*,*" RowDefinitions="2*,2*" HeightRequest="50" Padding="3" >
+                            <Button Opacity="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Clicked="AlbumClicked"/>
+
+                            <Label Text="{Binding Title}" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="2" FontAttributes="Bold" TextColor="White" />
+                            <Label Text="{Binding StringCredits}" Grid.Row="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Start" Padding="2" TextColor="LightGray" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+
+
+        <views:Toolbar Grid.Row="1"/>
+
+    </Grid>
+
+</ContentPage>

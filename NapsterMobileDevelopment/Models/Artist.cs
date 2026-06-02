@@ -1,4 +1,5 @@
-﻿using NapsterMobileDevelopment.Services;
+﻿
+using NapsterMobileDevelopment.Services;
 using NapsterMobileDevelopment.Services.Responses;
 using Newtonsoft.Json;
 using System;
@@ -30,19 +31,13 @@ namespace NapsterMobileDevelopment.Models
         public List<Album> HalfAlbums { get; set; } = [];
         public List<Album> Albums { get; set; } = [];
 
-
-        public Artist(ArtistApiResponse apiResponse)
+        public void AddAlbums(ArtistAlbumResponse apiResponse)
         {
-            if (apiResponse == null) return;
-
-            Name = apiResponse.Name;
-            ID = apiResponse.ID;
-
-            apiResponse.Tracks.Sort((a, b) => (a.Status != "Official").CompareTo(b.Status != "Official"));
-
             List<string> albumNames = [];
-            foreach (AlbumInfo album in apiResponse.Albums)
+            foreach (ArtistAlbumResponse.Release album in apiResponse.Releases)
             {
+                if (album.CoverArtArchive == null && album.CoverArtArchive.Front == true) { continue; }
+
                 if (Albums.Count < 10 && !albumNames.Contains(album.Title))
                 {
 
@@ -50,7 +45,7 @@ namespace NapsterMobileDevelopment.Models
                     newAlbum.Title = album.Title;
                     newAlbum.ID = album.ID;
 
-                    albumNames.Add(newAlbum.Title);;
+                    albumNames.Add(newAlbum.Title); ;
                     Albums.Add(newAlbum);
 
                     if (HalfAlbums.Count < 3)
@@ -60,6 +55,17 @@ namespace NapsterMobileDevelopment.Models
 
                 }
             }
+
+        }
+
+        public Artist(ArtistApiResponse apiResponse)
+        {
+            if (apiResponse == null) return;
+
+            Name = apiResponse.Name;
+            ID = apiResponse.ID;
+
+            apiResponse.Tracks.Sort((a, b) => (a.Status != "Official").CompareTo(b.Status != "Official"));
 
             List<string> trackNames = [];
             foreach (TrackApiResponse track in apiResponse.Tracks)
@@ -77,6 +83,7 @@ namespace NapsterMobileDevelopment.Models
 
                 }
             }
+
         }
 
 

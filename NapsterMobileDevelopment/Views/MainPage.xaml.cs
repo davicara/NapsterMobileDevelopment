@@ -12,12 +12,14 @@ namespace NapsterMobileDevelopment
 
         public List<Artist> TopArtists { get; set; } = [];
         public List<Album> TopAlbums { get; set; } = [];
-        ApiService apiService = new ApiService();
+        ApiService apiService;
 
 
-        public MainPage()
+        public MainPage(ApiService api)
         {
+            apiService = api;
             List<string> TopAlbumIds = ["b6b5b654-5c60-4520-b099-4a50d33e2bd0", "da13b81f-7b09-3fb6-b5c9-8551f22c797e", "eca6d001-35bb-4a1a-9bcb-8efd15814cc0", "80789e06-8449-45e7-92ca-d406b95738ed", "bc2b7291-11f1-4307-8191-df5639f96207", "6dd43823-4932-4b89-bdf2-968f463d6611", "8a5b0abf-f6a4-442c-8deb-478091d4523e", "08f54f68-7c89-4e22-8a0f-ac2b06e48568"];
+
 
             InitializeComponent();
             //LoadArtists();
@@ -60,7 +62,17 @@ namespace NapsterMobileDevelopment
 
             Album album = (sender as Button)?.BindingContext as Album;
 
-            await Navigation.PushAsync(new Views.AlbumPage(album, apiService));
+            var navigationParameter = new ShellNavigationQueryParameters
+            {
+                { "Album", album },
+                { "ApiService", apiService}
+            };
+
+
+
+            //new Views.AlbumPage(album, apiService)
+
+            await Shell.Current.GoToAsync($"//AlbumPage", navigationParameter);
 
         }
         public async void OnArtistClicked(object? sender, EventArgs e)
@@ -81,5 +93,7 @@ namespace NapsterMobileDevelopment
 
 
         }
+
+
     }
 }

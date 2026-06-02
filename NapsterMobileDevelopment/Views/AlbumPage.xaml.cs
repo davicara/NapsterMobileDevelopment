@@ -1,31 +1,42 @@
+
 using NapsterMobileDevelopment.Models;
 using NapsterMobileDevelopment.Services;
 
 namespace NapsterMobileDevelopment.Views;
 
+[QueryProperty(nameof(ActiveAlbum), "Album")]
+[QueryProperty(nameof(ApiServiceObj), "ApiService")]
 public partial class AlbumPage : ContentPage
 {
-	public Album ActiveAlbum;
-	public string ArtistName { get; set; }
-	public string ArtistID { get; set; }
+    private Album activeAlbum;
+    public Album ActiveAlbum
+    {
+        get => activeAlbum;
+        set
+        {
+            activeAlbum = value;
+            OnPropertyChanged();
+        }
+    }
+   
 
-	public string CoverArt {  get; set; }
+    private ApiService apiService;
+    public ApiService ApiServiceObj
+    {
+        get => apiService;
+        set
+        {
+            apiService = value;
+            OnPropertyChanged();
+        }
+    }
 
-	public List<Track> Tracks { get; set; }
 
-	ApiService ApiServiceObj { get; set; }
-
-
-	public AlbumPage(Album album, ApiService api)
+    public AlbumPage()
 	{
 
-		InitializeComponent();
-		ApiServiceObj = api;
-        ActiveAlbum = album;
-        ArtistName = album.ArtistName;
-        Tracks = album.Tracks;
-		CoverArt = album.CoverArt;
-		ArtistID = album.ArtistID;
+        InitializeComponent();
+
 
         BindingContext = null;
         BindingContext = this;
@@ -33,8 +44,14 @@ public partial class AlbumPage : ContentPage
 
 	public async void ArtistButtonClicked(object sender, EventArgs e)
 	{
-        Artist artist = await ApiServiceObj.GetArtist(ArtistID);
+        Artist artist = await apiService.GetArtist(activeAlbum.ArtistID, true);
 
-        await Navigation.PushAsync(new Views.ArtistPage(artist, ApiServiceObj));
+        var navigationParameter = new ShellNavigationQueryParameters
+        {
+            { "Artist", artist },
+            { "ApiService", apiService}
+        };
+
+        await Shell.Current.GoToAsync($"//ArtistPage", navigationParameter);
     }
 }

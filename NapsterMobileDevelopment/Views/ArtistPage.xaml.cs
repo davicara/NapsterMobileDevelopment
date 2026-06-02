@@ -1,31 +1,55 @@
+
 using NapsterMobileDevelopment.Models;
 using NapsterMobileDevelopment.Services;
 using NapsterMobileDevelopment.Services.Responses;
 namespace NapsterMobileDevelopment.Views;
 
+[QueryProperty(nameof(ArtistClass), "Artist")]
+[QueryProperty(nameof(ApiServiceObj), "ApiService")]
 public partial class ArtistPage : ContentPage
 {
+    Artist artistClass;
+	public Artist ArtistClass
+	{
+        get => artistClass;
+        set
+        {
+            artistClass = value;
+            PopularTracks = artistClass.HalfTracks;
+            Albums = artistClass.HalfAlbums;
 
-	public Artist ArtistClass { get; set; }
+            OnPropertyChanged(nameof(Albums));
+            OnPropertyChanged(nameof(PopularTracks));
+            OnPropertyChanged();
+        }
+    }
 	public List<Track> PopularTracks { get; set; }
 
     public List<Album> Albums { get; set; }
 
     public Boolean FullTracks = false;
 
-	public ApiService apiService { get; set; }
+    ApiService apiService;
+	public ApiService ApiServiceObj
+    {
+        get => apiService;
+        set
+        {
+            apiService = value;
+            OnPropertyChanged();
+        }
+    }
 
-	public ArtistPage(Artist _artist, ApiService api)
+    public ArtistPage()
 	{
 
 		InitializeComponent();
 
-		apiService = api;
-		PopularTracks = _artist.HalfTracks;
-        ArtistClass = _artist;
-		Albums = _artist.HalfAlbums;
 
-		BindingContext = null;
+
+        // _artist = (Artist)NavigationDataService.Get("Artist");
+        //ApiService api = (ApiService)NavigationDataService.Get("ApiService");
+        BindingContext = null;
 		BindingContext = this;
     }
 
@@ -34,7 +58,7 @@ public partial class ArtistPage : ContentPage
 		if (FullTracks == false)
 		{
 			FullTracks = true;
-			PopularTracks = ArtistClass.Tracks;
+			PopularTracks = artistClass.Tracks;
 			ShowMoreButton.Text = "Show Less";
 
 			BindingContext = null;
@@ -44,7 +68,7 @@ public partial class ArtistPage : ContentPage
 		else
 		{
             FullTracks = false;
-            PopularTracks = ArtistClass.HalfTracks;
+            PopularTracks = artistClass.HalfTracks;
             ShowMoreButton.Text = "Show More...";
 
             BindingContext = null;
@@ -60,7 +84,14 @@ public partial class ArtistPage : ContentPage
 
 		Album newAlbum = await apiService.GetAlbum(album.ID);
 
-        await Navigation.PushAsync(new Views.AlbumPage(newAlbum, apiService));
+        // new Views.AlbumPage(newAlbum, apiService)
+        var navigationParameter = new ShellNavigationQueryParameters
+            {
+                { "Album", newAlbum },
+                { "ApiService", apiService}
+            };
+
+        await Shell.Current.GoToAsync($"//AlbumPage", navigationParameter);
 
     }
 
