@@ -13,6 +13,9 @@ namespace NapsterMobileDevelopment.Models
 
         public string Title { get; set; }
 
+        public string ID { get; set; }
+
+        public string Image { get; set; } = "";
 
         public List<Artist> Credits { get; set; } = new List<Artist>();
 
@@ -20,8 +23,8 @@ namespace NapsterMobileDevelopment.Models
 
         public Track(TrackApiResponse apiData)
         {
-            
             Title = apiData.Title;
+            ID = apiData.ID;    
 
             string credits = string.Empty;
             foreach (var credit in apiData.Credits)
@@ -31,6 +34,10 @@ namespace NapsterMobileDevelopment.Models
             }
 
             StringCredits = credits;
+        }
+        public void AddImage(string image)
+        {
+            Image = image;
         }
     }
 }

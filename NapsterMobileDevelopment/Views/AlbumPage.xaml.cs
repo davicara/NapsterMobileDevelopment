@@ -49,7 +49,6 @@ public partial class AlbumPage : ContentPage
         var navigationParameter = new ShellNavigationQueryParameters
         {
             { "Artist", artist },
-            { "ApiService", apiService}
         };
 
         await Shell.Current.GoToAsync($"//ArtistPage", navigationParameter);

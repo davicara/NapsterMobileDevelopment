@@ -10,17 +10,11 @@ namespace NapsterMobileDevelopment.Services.Responses
     public class TrackApiResponse
     {
 
-        public class Credit
-        {
-            [JsonProperty("joinphrase")]
-            public string JoinPhrase { get; set; }
-            [JsonProperty("artist")]
-            public Artist Artist { get; set; }
-        }
-
         [JsonProperty("title")]
         public string Title { get; set; }
 
+        [JsonProperty("id")]
+        public string ID { get; set; }
 
         [JsonProperty("artist-credit")]
         public List<Credit> Credits { get; set; }
@@ -28,4 +22,14 @@ namespace NapsterMobileDevelopment.Services.Responses
         public string Status { get; set; }
 
     }
+
+
+    public class Credit
+    {
+        [JsonProperty("joinphrase")]
+        public string JoinPhrase { get; set; }
+        [JsonProperty("artist")]
+        public Artist Artist { get; set; }
+    }
+
 }

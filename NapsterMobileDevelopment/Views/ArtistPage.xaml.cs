@@ -5,7 +5,6 @@ using NapsterMobileDevelopment.Services.Responses;
 namespace NapsterMobileDevelopment.Views;
 
 [QueryProperty(nameof(ArtistClass), "Artist")]
-[QueryProperty(nameof(ApiServiceObj), "ApiService")]
 public partial class ArtistPage : ContentPage
 {
     Artist artistClass;
@@ -15,6 +14,7 @@ public partial class ArtistPage : ContentPage
         set
         {
             artistClass = value;
+            LoadImages(artistClass);
             PopularTracks = artistClass.HalfTracks;
             Albums = artistClass.HalfAlbums;
 
@@ -30,27 +30,32 @@ public partial class ArtistPage : ContentPage
     public Boolean FullTracks = false;
 
     ApiService apiService;
-	public ApiService ApiServiceObj
-    {
-        get => apiService;
-        set
-        {
-            apiService = value;
-            OnPropertyChanged();
-        }
-    }
 
-    public ArtistPage()
+    public async void LoadImages(Artist artist)
+    {
+        List<Task> tasks = [];
+        foreach (Track track in artist.Tracks)
+        {
+            tasks.Add(apiService.GetTrackImage(track));
+        }
+        foreach (Album album in artist.HalfAlbums)
+        {
+            tasks.Add(apiService.GetAlbumImage(album));
+        }
+
+        await Task.WhenAll(tasks);
+    }
+    public ArtistPage(ApiService api)
 	{
 
+        this.apiService = api;
+
 		InitializeComponent();
-
-
 
         // _artist = (Artist)NavigationDataService.Get("Artist");
         //ApiService api = (ApiService)NavigationDataService.Get("ApiService");
         BindingContext = null;
-		BindingContext = this;
+        BindingContext = this;
     }
 
 	public async void ShowMore(object sender, EventArgs e)

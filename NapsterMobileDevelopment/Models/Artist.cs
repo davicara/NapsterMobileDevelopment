@@ -65,24 +65,28 @@ namespace NapsterMobileDevelopment.Models
             Name = apiResponse.Name;
             ID = apiResponse.ID;
 
-            apiResponse.Tracks.Sort((a, b) => (a.Status != "Official").CompareTo(b.Status != "Official"));
-
-            List<string> trackNames = [];
-            foreach (TrackApiResponse track in apiResponse.Tracks)
+            if (apiResponse.Tracks != null)
             {
-                if (Tracks.Count < 10 && !trackNames.Contains(track.Title))
+                apiResponse.Tracks.Sort((a, b) => (a.Status != "Official").CompareTo(b.Status != "Official"));
+
+                List<string> trackNames = [];
+                foreach (TrackApiResponse track in apiResponse.Tracks)
                 {
-                    trackNames.Add(track.Title);
-                    Track new_track = new Track(track);
-                    Tracks.Add(new_track);
-
-                    if (HalfTracks.Count < 5)
+                    if (Tracks.Count < 10 && !trackNames.Contains(track.Title))
                     {
-                        HalfTracks.Add(new_track);
-                    }
+                        trackNames.Add(track.Title);
+                        Track new_track = new Track(track);
+                        Tracks.Add(new_track);
 
+                        if (HalfTracks.Count < 5)
+                        {
+                            HalfTracks.Add(new_track);
+                        }
+
+                    }
                 }
             }
+           
 
         }
 

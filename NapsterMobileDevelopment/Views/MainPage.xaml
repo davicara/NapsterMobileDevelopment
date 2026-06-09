@@ -42,12 +42,34 @@
 
                 </Grid>
 
-                <Button
-                x:Name="ArtistButton"
-                Text="Click me" 
-                
-                Clicked="OnArtistClicked"
-                HorizontalOptions="Fill" />
+
+                <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*">
+
+                    <CollectionView x:Name="CollectionViewTopTracks" ItemsSource="{Binding TopSongs}" ItemsLayout="VerticalGrid, 2" ItemSizingStrategy="MeasureAllItems">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid ColumnDefinitions="3.5*,7*" RowDefinitions="*" HeightRequest="65" Padding="3" >
+                                    <Button BackgroundColor="Gray" Grid.ColumnSpan="3" Clicked="AlbumClicked"/>
+
+                                    <Label Text="{Binding Name}" Grid.Column="2" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="5" FontAttributes="Bold" TextColor="White" />
+
+                                    <Border Padding="0" StrokeThickness="0">
+
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="9"/>
+                                        </Border.StrokeShape>
+
+                                        <Image Source="{Binding Image}" Aspect="AspectFill"/>
+
+                                    </Border>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </Grid>
+
+
             </VerticalStackLayout>
         </ScrollView>
 

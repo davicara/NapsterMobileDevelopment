@@ -5,11 +5,16 @@ using System.Text;
 
 namespace NapsterMobileDevelopment.Services.Responses
 {
-    public class SearchTrackResponse
+    public class SearchResponse<T>
     {
 
         [JsonProperty("releases")]
-        public TrackApiResponse[] Tracks { get; set; }
+        public T[] releases { get; set; }
 
+
+        [JsonProperty("artists")]
+        public ArtistApiResponse[] Artists { get; set; }
+
+        
     }
 }

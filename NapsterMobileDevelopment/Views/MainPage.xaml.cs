@@ -11,6 +11,7 @@ namespace NapsterMobileDevelopment
         int count = 0;
 
         public List<Artist> TopArtists { get; set; } = [];
+        public List<Track> TopSongs { get; set; } = [];
         public List<Album> TopAlbums { get; set; } = [];
         ApiService apiService;
 
@@ -19,11 +20,14 @@ namespace NapsterMobileDevelopment
         {
             apiService = api;
             List<string> TopAlbumIds = ["b6b5b654-5c60-4520-b099-4a50d33e2bd0", "da13b81f-7b09-3fb6-b5c9-8551f22c797e", "eca6d001-35bb-4a1a-9bcb-8efd15814cc0", "80789e06-8449-45e7-92ca-d406b95738ed", "bc2b7291-11f1-4307-8191-df5639f96207", "6dd43823-4932-4b89-bdf2-968f463d6611", "8a5b0abf-f6a4-442c-8deb-478091d4523e", "08f54f68-7c89-4e22-8a0f-ac2b06e48568"];
-
+            List<string> TopTrackIds = ["bb11052e-44d6-4753-b702-5714f9d5a32c", "4d33146e-4c4b-4182-84f0-9a75f21c26c4"];
 
             InitializeComponent();
+            BindingContext = null;
             //LoadArtists();
             LoadTopAlbums(TopAlbumIds);
+            LoadTopTracks(TopTrackIds);
+
 
         }
 
@@ -53,9 +57,29 @@ namespace NapsterMobileDevelopment
             //TopAlbums.Add(await apiService.GetAlbum("da13b81f-7b09-3fb6-b5c9-8551f22c797e"));
             //TopAlbums.Add(await apiService.GetAlbum("12bd0263-9907-4fb4-964a-b94d8784bc30"));
 
-            BindingContext = null;
             BindingContext = this;
         }
+
+        public async Task LoadTopTracks(List<string> trackIDs)
+        {
+
+            List<Task<Track>> aList = [];
+            foreach (string ID in trackIDs)
+            {
+                aList.Add(apiService.GetTrack(ID));
+            }
+
+            await Task.WhenAll(aList);
+
+            TopSongs.AddRange(aList.Select((task) => task.Result));
+
+
+            //TopAlbums.Add(await apiService.GetAlbum("da13b81f-7b09-3fb6-b5c9-8551f22c797e"));
+            //TopAlbums.Add(await apiService.GetAlbum("12bd0263-9907-4fb4-964a-b94d8784bc30"));
+
+            BindingContext = this;
+        }
+
 
         public async void AlbumClicked(object? sender, EventArgs e)
         {

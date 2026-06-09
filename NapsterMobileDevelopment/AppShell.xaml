@@ -26,7 +26,7 @@
         Route="AlbumPage"/>
 
     <ShellContent
-        Title="Home"
+        Title="Search"
         ContentTemplate="{DataTemplate views:SearchPage}"
         Route="SearchPage" />
 

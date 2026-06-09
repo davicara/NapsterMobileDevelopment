@@ -7,11 +7,10 @@
     <Grid
         VerticalOptions="End"
         ColumnDefinitions="2*,*,*,*,*,*,2*"
-        BackgroundColor="Black"
-        HeightRequest="75"
-        Opacity=".5">
+        BackgroundColor="Gray"
+        HeightRequest="75">
 
-        <Grid RowDefinitions="*,*" Grid.Column="0">
+        <Grid RowDefinitions="*,*" Grid.Column="0" VerticalOptions="Center">
             <Button x:Name="HomePageButton"
                     BackgroundColor="Transparent"
                     Grid.RowSpan="2" 
@@ -22,18 +21,18 @@
                    Grid.Row="1" />
         </Grid>
 
-        <Grid RowDefinitions="*,*" Grid.Column="3">
+        <Grid RowDefinitions="*,*" Grid.Column="3" VerticalOptions="Center">
             <Button x:Name="SearchPageButton"
                     BackgroundColor="Transparent"
                     Grid.RowSpan="2"
                     Clicked="SearchPageClicked"/>
-            <Image Source="search.jpg" />
+            <Image Source="search.png" />
             <Label Text="Search"
                    HorizontalOptions="Center"
                    Grid.Row="1" />
         </Grid>
 
-        <Grid RowDefinitions="*,*" Grid.Column="6">
+        <Grid RowDefinitions="*,*" Grid.Column="6" VerticalOptions="Center">
             <Button x:Name="PlaylistPageButton"
                     BackgroundColor="Transparent"
                     Grid.RowSpan="2" />

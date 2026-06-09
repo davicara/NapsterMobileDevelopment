@@ -1,4 +1,4 @@
-<api type="debug" assembly-name="NapsterMobileDevelopment" mvid="df2a281cd1044ba8a810c0dcf45237d4">
+<api type="debug" assembly-name="NapsterMobileDevelopment" mvid="daba5f80d5394c439dda922daa95f16a">
   <java-to-managed>
     <entry java-name="crc64ed037ced1c48cd83/MainActivity" managed-name="NapsterMobileDevelopment.MainActivity, NapsterMobileDevelopment" managed-type-token-id="33554441" />
     <entry java-name="crc64ed037ced1c48cd83/MainApplication" managed-name="NapsterMobileDevelopment.MainApplication, NapsterMobileDevelopment" managed-type-token-id="33554442" />

@@ -30,10 +30,14 @@ namespace NapsterMobileDevelopment.Models
         {
             if (apiResponse == null) return;
 
-            foreach (TrackApiResponse track in apiResponse.Media[0].Tracks)
-            {
-                Tracks.Add(new Track(track));
+            if(apiResponse.Media[0].Tracks != null) {
+
+                foreach (TrackApiResponse track in apiResponse.Media[0].Tracks)
+                {
+                    Tracks.Add(new Track(track));
+                }
             }
+            ;
 
             ID = apiResponse.ID;
             Title = apiResponse.Title;

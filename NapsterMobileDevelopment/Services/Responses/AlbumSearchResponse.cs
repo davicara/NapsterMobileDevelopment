@@ -4,10 +4,7 @@ using System.Text;
 
 namespace NapsterMobileDevelopment.Services.Responses
 {
-    public class SearchRequestResponse
+    internal class AlbumSearchResponse
     {
-
-
-
     }
 }

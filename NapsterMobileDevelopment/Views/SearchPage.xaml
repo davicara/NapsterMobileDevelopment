@@ -7,59 +7,36 @@
 
 
 
-    <Grid RowDefinitions="8*, auto">
+    <Grid RowDefinitions="8*, auto" BackgroundColor="White">
 
 
-        <VerticalStackLayout Margin="20,0">
+        <Grid Grid.Row="0" RowDefinitions="*, 12*" Margin="20,0">
 
             <Grid ColumnDefinitions="3*,*">
                 <SearchBar Grid.Column="0" x:Name="searchBar" Placeholder="Search..." HorizontalOptions="Fill" SearchButtonPressed="SearchPressed" />
                 <Picker x:Name="filterPicker"
                         Title="Select option"
-                        SelectedIndexChanged="OnFilterChanged" 
                         Grid.Column="1"/>
             </Grid>
-
-            <CollectionView x:Name="CollectionViewTopAlbums" ItemsSource="{Binding Albums}" ItemsLayout="VerticalGrid" ItemSizingStrategy="MeasureAllItems">
+            
+            <CollectionView Grid.Row="1" x:Name="CollectionViewTopTracks" ItemsSource="{Binding ViewModels}" ItemsLayout="VerticalGrid">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid ColumnDefinitions="10*,*" RowDefinitions="2*,2*" HeightRequest="50" Padding="3" >
-                            <Button Opacity="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Clicked="AlbumClicked"/>
+                        <Grid ColumnDefinitions="*,8*" RowDefinitions="2*,2*" HeightRequest="50" Padding="3" >
+                            <Button Clicked="ItemClicked" Opacity="1" Grid.RowSpan="2" Grid.ColumnSpan="2" BackgroundColor="Black"/>
 
-                            <Label Text="{Binding Title}" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="2" FontAttributes="Bold" TextColor="White" />
-                            <Label Text="{Binding StringCredits}" Grid.Row="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Start" Padding="2" TextColor="LightGray" />
+                            <Image Source="{Binding Image}" Grid.RowSpan="2" Aspect="AspectFill"/>
+                            <Label Text="{Binding Name}" Grid.Column="1" Grid.Row="0" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="2" FontAttributes="Bold" TextColor="White" />
+                            <Label Text="{Binding Extra}" Grid.Column="1" Grid.Row="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Start" Padding="2" TextColor="Gray"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <CollectionView x:Name="CollectionViewTopTracks" ItemsSource="{Binding Tracks}" ItemsLayout="VerticalGrid" ItemSizingStrategy="MeasureAllItems">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid ColumnDefinitions="10*,*" RowDefinitions="2*,2*" HeightRequest="50" Padding="3" >
-                            <Button Opacity="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Clicked="AlbumClicked"/>
 
-                            <Label Text="{Binding Title}" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="2" FontAttributes="Bold" TextColor="White" />
-                            <Label Text="{Binding StringCredits}" Grid.Row="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Start" Padding="2" TextColor="LightGray" />
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
 
-            <CollectionView x:Name="CollectionViewTopArtists" ItemsSource="{Binding Artists}" ItemsLayout="VerticalGrid" ItemSizingStrategy="MeasureAllItems">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid ColumnDefinitions="10*,*" RowDefinitions="2*,2*" HeightRequest="50" Padding="3" >
-                            <Button Opacity="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Clicked="AlbumClicked"/>
 
-                            <Label Text="{Binding Title}" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="2" FontAttributes="Bold" TextColor="White" />
-                            <Label Text="{Binding StringCredits}" Grid.Row="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Start" Padding="2" TextColor="LightGray" />
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
-        </VerticalStackLayout>
+        </Grid>
 
 
         <views:Toolbar Grid.Row="1"/>

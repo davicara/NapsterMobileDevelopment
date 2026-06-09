@@ -7,7 +7,7 @@
 
     <Grid RowDefinitions="8*,auto">
         <Grid RowDefinitions="*,15*" BackgroundColor="Black">
-            <Label Grid.Row="0" Text="{Binding ArtistClass.Name}" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
+            <Label Grid.Row="0" Text="{Binding ArtistClass.Name}" TextColor="White" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
 
             <ScrollView Grid.Row="1">
                 <VerticalStackLayout Padding="5,0" Spacing="2">
@@ -23,11 +23,12 @@
                         <CollectionView x:Name="CollectionViewTopArtists" ItemsSource="{Binding PopularTracks}" ItemsLayout="VerticalGrid" ItemSizingStrategy="MeasureAllItems">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid ColumnDefinitions="10*,*" RowDefinitions="2*,2*" HeightRequest="50" Padding="3" >
+                                    <Grid ColumnDefinitions="*, 10*,*" RowDefinitions="2*,2*" HeightRequest="50" Padding="3" >
                                         <Button Opacity="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Clicked="AlbumClicked"/>
 
-                                        <Label Text="{Binding Title}" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="2" FontAttributes="Bold" TextColor="White" />
-                                        <Label Text="{Binding StringCredits}" Grid.Row="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Start" Padding="2" TextColor="LightGray" />
+                                        <Image Source="{Binding Image}" Grid.RowSpan="2" Aspect="AspectFill"/>
+                                        <Label Text="{Binding Title}" Grid.Column="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="2" FontAttributes="Bold" TextColor="White" />
+                                        <Label Text="{Binding StringCredits}" Grid.Column="1" Grid.Row="1" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Start" Padding="2" TextColor="LightGray" />
                                     </Grid>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
@@ -47,6 +48,7 @@
                                     <Grid ColumnDefinitions="3.5*,7*" RowDefinitions="*" HeightRequest="65" Padding="3" >
                                         <Button BackgroundColor="Gray" Grid.ColumnSpan="3" Clicked="AlbumClicked"/>
 
+
                                         <Label Text="{Binding Title}" Grid.Column="2" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" Padding="5" FontAttributes="Bold" TextColor="White" />
 
 
@@ -59,7 +61,9 @@
                                             </Border.StrokeShape>
 
 
+                                            <Image Source="{Binding CoverArt}" Aspect="AspectFill"/>
                                         </Border>
+
                                     </Grid>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>

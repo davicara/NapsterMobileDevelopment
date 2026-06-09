@@ -50,8 +50,6 @@ namespace NapsterMobileDevelopment.Services
                 throw new HttpRequestException($"Failed to fetch Api response for query: {requestUrl}. Server responded: {response.StatusCode}");
             }
 
-            response.EnsureSuccessStatusCode();
-
             return await response.Content.ReadAsStringAsync();
 
 
@@ -73,7 +71,8 @@ namespace NapsterMobileDevelopment.Services
 
             if (response != null && !response.IsSuccessStatusCode)
             {
-                throw new HttpRequestException($"Failed to fetch Api response for query: {url}. Server responded: {response.StatusCode}");
+                //throw new HttpRequestException($"Failed to fetch Api response for query: {url}. Server responded: {response.StatusCode}");
+                return "";
             }
 
             //response!.EnsureSuccessStatusCode();
@@ -128,6 +127,47 @@ namespace NapsterMobileDevelopment.Services
 
         }
 
+        public async Task<Track> GetTrack(string trackURL)
+        {
+
+            string jsonData = await GetJson($"release/{trackURL}?inc=artist-credits&");
+
+
+            TrackApiResponse trackResponse = JsonConvert.DeserializeObject<TrackApiResponse>(jsonData);
+
+            Track track = new Track(trackResponse);
+
+            track.Image = await this.GetTrackImage(track);
+
+            return track;
+        }
+
+        public async Task<string> GetTrackImage(Track track)
+        {
+            string image = await GetURL($"https://coverartarchive.org/release/{track.ID}/front");
+
+            if (image != null)
+            {
+                track.Image = image;
+            }
+
+            return image;
+
+        }
+
+        public async Task<string> GetAlbumImage(Album album)
+        {
+            string image = await GetURL($"https://coverartarchive.org/release/{album.ID}/front");
+
+            if (image != null)
+            {
+                album.CoverArt = image;
+            }
+
+            return image;
+
+        }
+
         public async Task<Artist> GetArtistReleases(Artist artist)
         {
             string jsonData = await GetJson($"release?artist={artist.ID}&type=album&", true);
@@ -142,15 +182,15 @@ namespace NapsterMobileDevelopment.Services
         public async Task<List<Track>> SearchTracks(string search)
         {
 
-            string jsonData = await GetJson($"release?query=type:single%20AND%20{search}&", true);
+            string jsonData = await GetJson($"release?limit=10&query=type:single%20AND%20{search}&", true);
 
             List<Track> tracks = new List<Track>();
 
 
 
-            SearchTrackResponse response = JsonConvert.DeserializeObject<SearchTrackResponse>(jsonData);
+            SearchResponse<TrackApiResponse> response = JsonConvert.DeserializeObject<SearchResponse<TrackApiResponse>>(jsonData);
 
-            foreach (TrackApiResponse track in response.Tracks)
+            foreach (TrackApiResponse track in response.releases)
             {
                 Track newTrack = new Track(track);
                 tracks.Add(newTrack);
@@ -162,13 +202,13 @@ namespace NapsterMobileDevelopment.Services
         public async Task<List<Album>> SearchAlbums(string search)
         {
 
-            string jsonData = await GetJson($"release?query=type:album%20AND%20{search}&", true);
+            string jsonData = await GetJson($"release?limit=10&query=type:album%20AND%20{search}&", true);
 
             List<Album> albums = new List<Album>();
 
-            List<AlbumApiResponse> response = JsonConvert.DeserializeObject<List<AlbumApiResponse>>(jsonData);
+            SearchResponse<AlbumApiResponse> response = JsonConvert.DeserializeObject<SearchResponse<AlbumApiResponse>>(jsonData);
 
-            foreach (AlbumApiResponse album in response)
+            foreach (AlbumApiResponse album in response.releases)
             {
 
                 Album newAlbum = new Album(album, null);
@@ -181,13 +221,13 @@ namespace NapsterMobileDevelopment.Services
         public async Task<List<Artist>> SearchArtists(string search)
         {
 
-            string jsonData = await GetJson($"artist?query={search}&", true);
+            string jsonData = await GetJson($"artist?limit=10&query={search}&", true);
 
             List<Artist> artists = new List<Artist>();
 
-            List<ArtistApiResponse> response = JsonConvert.DeserializeObject<List<ArtistApiResponse>>(jsonData);
+            SearchResponse<TrackApiResponse> response = JsonConvert.DeserializeObject<SearchResponse<TrackApiResponse>>(jsonData);
 
-            foreach (ArtistApiResponse artist in response)
+            foreach (ArtistApiResponse artist in response.Artists)
             {
                 Artist newArtist = new Artist(artist);
                 artists.Add(newArtist);
